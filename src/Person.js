@@ -13,6 +13,7 @@ export default class Person extends Component {
     }
 
     render() {
+        
         return (
             <h3 onClick={this.lovePoneys}>
                 Bonjour, je suis {this.props.firstname} {this.props.lastname}
