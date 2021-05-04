@@ -12,6 +12,10 @@ export default class App extends Component {
       {name: "Pierre", age: 23},
       {name: "Paul", age: 12},
       {name: "bertrand", age: 40}
+    ],
+    comments: [
+      { name: "JB", message: "Youhou la famille!"},
+      { name: "Kirikou", message: "Je ne suis pas grand mais je suis vaillant"}
     ]
   }
 
@@ -54,6 +58,10 @@ export default class App extends Component {
     ]
     */
 
+    const commentsJSX = this.state.comments.map(comment => {
+      return <p>{comment.name} a dit: "{comment.message}"</p>
+    })
+
     return (
       <div className="App">
         <h1>Bienvenue les gens!</h1>
@@ -61,6 +69,8 @@ export default class App extends Component {
         <ul>
           {peopleJSX}
         </ul>
+
+        {commentsJSX}
 
         <Card 
           bachibouzouk="Comment manger une pomme?"
